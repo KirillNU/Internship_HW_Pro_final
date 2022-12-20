@@ -15,17 +15,29 @@
 
 Исходный массив:
 
-    [[18 34 27 36]
-     [16 25 24 29]
-     [16 18 36 16]]
+[[35 36 25 34]
+ [26 27 23 29]
+ [28 34 33 17]]
 
-Реузльтирующий массив должен выглядеть следующим образом:
-
-    [['small' 'large' 'medium' 'large']
-     ['small' 'medium' 'medium' 'medium']
-     ['small' 'small' 'large' 'small']]
+[['large' 'large' 'medium' 'large']
+ ['medium' 'medium' 'medium' 'medium']
+ ['medium' 'large' 'large' 'small']]
 '''
 
 import numpy as np
-import matplotlib.pyplot as plt
 import random
+
+random_matrix = np.random.randint(15, 37, (3, 4))
+final_matrix = np.empty((3, 4), 'U8')
+print(random_matrix, '\n')
+
+for i in range(3):
+    for j in range(4):
+        if random_matrix[i][j] < 20:
+           final_matrix[i][j] = 'small'
+        elif 20 <= random_matrix[i][j] <=30:
+            final_matrix[i][j] = 'medium'
+        else:
+            final_matrix[i][j] = 'large'
+print(final_matrix)
+
