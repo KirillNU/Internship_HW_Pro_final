@@ -25,7 +25,6 @@
 '''
 
 import numpy as np
-import random
 
 random_matrix = np.random.randint(15, 37, (3, 4))
 final_matrix = np.empty((3, 4), 'U8')

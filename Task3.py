@@ -11,5 +11,16 @@
 '''
 
 import numpy as np
-import matplotlib.pyplot as plt
 import random
+
+random_matrix = np.random.randint(15, 37, 10)
+print(random_matrix)
+for i in range(len(random_matrix) - 1):
+#    print(random_matrix[i], random_matrix[i + 1])
+    if random_matrix[i] < random_matrix[i + 1]:
+        pass
+    else:
+        diff = random_matrix[i] - random_matrix[i + 1]
+        random_matrix[i] = random_matrix[i + 1]
+        random_matrix[i + 1] = random_matrix[i + 1] + diff
+    print(random_matrix[i])

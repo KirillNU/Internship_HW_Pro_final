@@ -11,5 +11,8 @@ image.png
 '''
 
 import numpy as np
-import matplotlib.pyplot as plt
-import random
+
+first_monday_2015 = np.busday_offset('2015-01', 0, roll='forward', weekmask='Mon')
+print(f'Первый понедельник в Январе 2015 года:\n{first_monday_2015}')
+
+
