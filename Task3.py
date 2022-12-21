@@ -11,16 +11,28 @@
 '''
 
 import numpy as np
-import random
 
 random_matrix = np.random.randint(15, 37, 10)
 print(random_matrix)
-for i in range(len(random_matrix) - 1):
-#    print(random_matrix[i], random_matrix[i + 1])
-    if random_matrix[i] < random_matrix[i + 1]:
-        pass
-    else:
-        diff = random_matrix[i] - random_matrix[i + 1]
-        random_matrix[i] = random_matrix[i + 1]
-        random_matrix[i + 1] = random_matrix[i + 1] + diff
-    print(random_matrix[i])
+
+
+def sort_ascend(inp_arr):
+    def exch_ij(i, j):
+        inp_arr[i], inp_arr[j] = inp_arr[j], inp_arr[i]
+
+    n = len(inp_arr)
+    replaced = True
+
+    x = -1
+    while replaced:
+        replaced = False
+        x = x + 1
+        for i in range(1, n - x):
+            if inp_arr[i - 1] > inp_arr[i]:
+                exch_ij(i - 1, i)
+                replaced = True
+    print(f'Переборы: {x}')
+    return inp_arr
+
+
+print(sort_ascend(random_matrix))
