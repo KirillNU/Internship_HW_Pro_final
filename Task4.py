@@ -32,23 +32,3 @@ figure.set_figwidth(7)
 figure.set_figheight(7)
 
 plt.show()
-
-
-# x = np.random.rand(4000) * 100
-# y = np.random.rand(4000) ** 0.5
-#
-# figure, axes = plt.subplots()
-#
-# axes.scatter(x, y, c = [[1, 0, 0, 0.35]], s = 2)
-#
-# figure.set_facecolor('grey')
-# axes.set_facecolor('lightblue')
-#
-# plt.title('График рассеяния', color='red', fontsize= 16)
-# plt.xlabel('Переменная X', color='blue')
-# plt.ylabel('Переменная Y', color='magenta')
-#
-# figure.set_figwidth(8)
-# figure.set_figheight(8)
-#
-# plt.show()
