@@ -35,5 +35,3 @@ figure.set_figwidth(8)
 figure.set_figheight(8)
 
 plt.show()
-
-# print(f'Матрица X: {matrix_x} \nМатрица Y: {matrix_y}')
