@@ -26,12 +26,16 @@ matrix_y = np.array(y)
 
 figure, axes = plt.subplots()
 
-axes.scatter(matrix_x, matrix_y, c='red')
+#axes.scatter(matrix_x, matrix_y, c='red')
+plt.plot(matrix_x, matrix_y, c='red')
 
 plt.xlabel('Переменная X', color='green')
 plt.ylabel('Переменная Y', color='blue')
 
-figure.set_figwidth(8)
-figure.set_figheight(8)
+plt.title('Самолёт', color='red', fontsize= 16)
 
+figure.set_figwidth(6)
+figure.set_figheight(4)
+
+plt.grid()
 plt.show()

@@ -16,6 +16,10 @@ random_matrix = np.random.randint(15, 37, 10)
 print(random_matrix)
 
 
+random_matrix = np.random.randint(15, 37, 10)
+print(f'Сгенерированный массив: {random_matrix}')
+
+
 def sort_ascend(inp_arr):
     def exch_ij(i, j):
         inp_arr[i], inp_arr[j] = inp_arr[j], inp_arr[i]
@@ -35,4 +39,4 @@ def sort_ascend(inp_arr):
     return inp_arr
 
 
-print(sort_ascend(random_matrix))
+print(f'Отсортированный массив: {sort_ascend(random_matrix)}')
